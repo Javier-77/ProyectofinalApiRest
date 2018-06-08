@@ -104,6 +104,9 @@ app.put('/users/:id',(req, res) => {
     let params = req.params;
     let data = req.body;
     users[params.id]['name'] = data.Name;
+	users[params.id]['lastName'] = data.LastName;
+	users[params.id]['email'] = data.Email;
+	users[params.id]['password'] = data.Password;
     res.send("usuario update")
 })
 
