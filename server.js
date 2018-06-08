@@ -66,7 +66,13 @@ app.post('/pilotos', (req, res) => {
 app.put('/pilotos/:id',(req, res) => {
     let params = req.params;
     let data = req.body;
+    pilotos[params.id]['numero'] = data.Numero;
     pilotos[params.id]['name'] = data.Name;
+    pilotos[params.id]['lastName'] = data.LastName;
+    pilotos[params.id]['team'] = data.Team;
+    pilotos[params.id]['country'] = data.Country;	
+    pilotos[params.id]['dateBirth'] = data.DateBirth;	
+    pilotos[params.id]['placeBirth'] = data.PlaceBirth;	
     res.send("piloto update")
 })
 
@@ -148,6 +154,11 @@ app.put('/pistas/:id',(req, res) => {
     let params = req.params;
     let data = req.body;
     pistas[params.id]['name'] = data.Name;
+    pistas[params.id]['firstGrandPrix'] = data.FirstGrandPrix;
+    pistas[params.id]['numberLaps'] = data.NumberLaps;
+    pistas[params.id]['circuitLength'] = data.CircuitLength;
+    pistas[params.id]['raceDistance'] = data.RaceDistance;
+    pistas[params.id]['countryPrix'] = data.CountryPrix;
     res.send("pistas update")
 })
 
