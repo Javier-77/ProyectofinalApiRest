@@ -23,20 +23,13 @@ var users = [
 ];
 
 var pistas = [
-    {id: 0, name: 'Circuito grand prix de Melbourne', firstGrandPrix: '1996', numberLaps: '58', 
-					circuitLength: '5.303 Km', raceDistance: '307.574 Km', countryPrix: 'Australia'},
-    {id: 1, name: 'Circuito internacional de Shangai', firstGrandPrix: '2004', numberLaps: '56', 
-					circuitLength: '5.451 Km', raceDistance: '305.066 Km', countryPrix: 'China'},
-	{id: 2, name: 'Circuito internacional de Bahrain', firstGrandPrix: '2004', numberLaps: '57', 
-					circuitLength: '5.412 Km', raceDistance: '308.238 Km', countryPrix: 'Sakhir'},
-	{id: 3, name: 'Autodromo Sochi', firstGrandPrix: '2014', numberLaps: '53', 
-					circuitLength: '5.848 Km', raceDistance: '309.745 Km', countryPrix: 'Rusia'},
-	{id: 4, name: 'Circuito de Barcelona-Catalunya', firstGrandPrix: '1991', numberLaps: '66', 
-					circuitLength: '4.655 Km', raceDistance: '307.104 Km', countryPrix: 'España'},
-	{id: 5, name: 'Circuito de Monaco', firstGrandPrix: '1950', numberLaps: '78', 
-					circuitLength: '3.337 Km', raceDistance: '206.286 Km', countryPrix: 'Monaco'},
-	{id: 6, name: 'Circuito  Gilles-Villenueve', firstGrandPrix: '1978', numberLaps: '70', 
-					circuitLength: '4.361 Km', raceDistance: '305.27 Km', countryPrix: 'Canada'},
+    {id: 0, name: 'Circuito grand prix de Melbourne', firstGrandPrix: '1996', numberLaps: '58', circuitLength: '5.303 Km', raceDistance: '307.574 Km', countryPrix: 'Australia'},
+    {id: 1, name: 'Circuito internacional de Shangai', firstGrandPrix: '2004', numberLaps: '56', circuitLength: '5.451 Km', raceDistance: '305.066 Km', countryPrix: 'China'},
+	{id: 2, name: 'Circuito internacional de Bahrain', firstGrandPrix: '2004', numberLaps: '57', circuitLength: '5.412 Km', raceDistance: '308.238 Km', countryPrix: 'Sakhir'},
+	{id: 3, name: 'Autodromo Sochi', firstGrandPrix: '2014', numberLaps: '53', circuitLength: '5.848 Km', raceDistance: '309.745 Km', countryPrix: 'Rusia'},
+	{id: 4, name: 'Circuito de Barcelona-Catalunya', firstGrandPrix: '1991', numberLaps: '66', circuitLength: '4.655 Km', raceDistance: '307.104 Km', countryPrix: 'España'},
+	{id: 5, name: 'Circuito de Monaco', firstGrandPrix: '1950', numberLaps: '78', circuitLength: '3.337 Km', raceDistance: '206.286 Km', countryPrix: 'Monaco'},
+	{id: 6, name: 'Circuito  Gilles-Villenueve', firstGrandPrix: '1978', numberLaps: '70', circuitLength: '4.361 Km', raceDistance: '305.27 Km', countryPrix: 'Canada'},
 ];
 
 // soporte para body codificados en jsonsupport
