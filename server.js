@@ -7,22 +7,14 @@ const hostname = '127.0.0.1';
 const PORT = process.env.PORT || 5000
 
 var pilotos = [
-    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilston', team: 'Mercedez', 
-					country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra'},
-    {id: 1, numero: '5', name: 'Sebastian', lastName: 'Vettel', team: 'Ferrari', 
-					country: 'Alemania', dateBirth: '03/07/1987', placeBirth: 'Heppenheim, Alemania'},
-	{id: 2, numero: '3', name: 'Daniel', lastName: 'Ricciardo', team: 'RedBull Racing', 
-					country: 'Australia', dateBirth: '01/07/1989', placeBirth: 'Perth, Australia'},
-	{id: 3, numero: '77', name: 'Valtteri', lastName: 'Bottas', team: 'Mercedez', 
-					country: 'Finlandia', dateBirth: '28/08/19879', placeBirth: 'Nastola, Finlandia'},
-	{id: 4, numero: '7', name: 'Kimi', lastName: 'Raikkonen', team: 'Ferrari', 
-					country: 'Finlandia', dateBirth: '17/10/1979', placeBirth: 'Espoo, Finlandia'},
-	{id: 5, numero: '33', name: 'Max', lastName: 'Verstappen', team: 'RedBull Racing', 
-					country: 'Países Bajos', dateBirth: '30/09/1997', placeBirth: 'Hasselt, Belgica'},
-	{id: 6, numero: '14', name: 'Fernando', lastName: 'Alonso', team: 'Mclaren', 
-					country: 'España', dateBirth: '29/07/1981', placeBirth: 'Oviedo, España'},
-	{id: 7, numero: '27', name: 'Nico', lastName: 'Hulkenberg', team: 'Renault', 
-					country: 'Alemania', dateBirth: '19/08/1987', placeBirth: 'Emmerich am Rhein, Alemania'},    
+    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilston', team: 'Mercedez', country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra'},
+    {id: 1, numero: '5', name: 'Sebastian', lastName: 'Vettel', team: 'Ferrari', country: 'Alemania', dateBirth: '03/07/1987', placeBirth: 'Heppenheim, Alemania'},
+	{id: 2, numero: '3', name: 'Daniel', lastName: 'Ricciardo', team: 'RedBull Racing', country: 'Australia', dateBirth: '01/07/1989', placeBirth: 'Perth, Australia'},
+	{id: 3, numero: '77', name: 'Valtteri', lastName: 'Bottas', team: 'Mercedez', country: 'Finlandia', dateBirth: '28/08/19879', placeBirth: 'Nastola, Finlandia'},
+	{id: 4, numero: '7', name: 'Kimi', lastName: 'Raikkonen', team: 'Ferrari', country: 'Finlandia', dateBirth: '17/10/1979', placeBirth: 'Espoo, Finlandia'},
+	{id: 5, numero: '33', name: 'Max', lastName: 'Verstappen', team: 'RedBull Racing', country: 'Países Bajos', dateBirth: '30/09/1997', placeBirth: 'Hasselt, Belgica'},
+	{id: 6, numero: '14', name: 'Fernando', lastName: 'Alonso', team: 'Mclaren', country: 'España', dateBirth: '29/07/1981', placeBirth: 'Oviedo, España'},
+	{id: 7, numero: '27', name: 'Nico', lastName: 'Hulkenberg', team: 'Renault', country: 'Alemania', dateBirth: '19/08/1987', placeBirth: 'Emmerich am Rhein, Alemania'},    
 ];
 
 var users = [
