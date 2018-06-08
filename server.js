@@ -95,7 +95,7 @@ app.post('/users', (req, res) => {
     let data = req.body;
     let consecutive = users.length;
     let itemUser = {id: consecutive, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
-    pilotos.push(itemUser)
+    users.push(itemUser)
     res.send("New users add")
 })
 
