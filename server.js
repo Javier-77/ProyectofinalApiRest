@@ -18,8 +18,8 @@ var pilotos = [
 ];
 
 var users = [
-    {id: 0, name: 'Admin', lastName: 'Admin', email: '1234', password: '1234'},
-	{id: 1, name: 'Admin2', lastName: 'Admin', email: '1234', password: '1234'}
+    {id: 0, userName: 'Admin', name: 'Admin', lastName: 'Admin', email: '1234', password: '1234'},
+	{id: 1, userName: 'Admin',name: 'Admin2', lastName: 'Admin', email: '1234', password: '1234'}
 ];
 
 var pistas = [
