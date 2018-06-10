@@ -56,8 +56,14 @@ app.get('/pilotos', (req, res) => {
 app.post('/pilotos', (req, res) => {
     let data = req.body;
     let consecutive = pilotos.length;
-    let itemUser = {id: consecutive, numero:data.Numero, name: data.Name, lastName: data.LastName, team: data.Team, country: data.Country, 
-					dateBirth: data.DateBirth, placeBirth: data.PlaceBirth};
+    let itemUser = {id: consecutive,
+				numero:data.Numero, 
+				name: data.Name, 
+				lastName: data.LastName, 
+				team: data.Team, 
+				country: data.Country, 
+				dateBirth: data.DateBirth, 
+				placeBirth: data.PlaceBirth};
     pilotos.push(itemUser)
     res.send("New piloto add")
 })
@@ -106,12 +112,6 @@ app.post('/validateUser', (req, res) => {
     res.send(usersTmp)
 })
 
-
-
-
-
-
-
 // Listar users
 app.get('/users', (req, res) => {
     let pos = 0;
@@ -127,7 +127,7 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     let data = req.body;
     let consecutive = users.length;
-    let itemUser = {id: consecutive, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
+    let itemUser = {id: consecutive, userName: data.UserName, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
     users.push(itemUser)
     res.send("New users add")
 })
