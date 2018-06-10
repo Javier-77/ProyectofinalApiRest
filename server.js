@@ -96,7 +96,7 @@ app.post('/validateUser', (req, res) => {
     let usersTmp = [{success: false, id: 0, username: '', lastName: '', email: '', password: ''}];
 
     users.some(function (value, index, _arr) {
-        if( (value.name == data.Name) && (value.password == data.Password) ){
+        if( (value.userName == data.userName) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
 			usersTmp[0]['userName'] = value.UserName;
@@ -112,6 +112,8 @@ app.post('/validateUser', (req, res) => {
 
     res.send(usersTmp)
 })
+
+
 
 // Listar users
 app.get('/users', (req, res) => {
