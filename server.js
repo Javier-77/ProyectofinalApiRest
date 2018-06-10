@@ -85,6 +85,34 @@ app.delete('/pilotos/:id',(req, res) => {
  
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
+app.post('/validateUser', (req, res) => {
+    let data = req.body;
+    let usersTmp = [{success: false, id: 0, username: '', password: '', name: '', email: '', image: ''}];
+
+    users.some(function (value, index, _arr) {
+        if( (value.username == data.Username) && (value.password == data.Password) ){
+            usersTmp[0]['success'] = true;
+            usersTmp[0]['id'] = value.id;
+            usersTmp[0]['username'] = value.username;
+            usersTmp[0]['password'] = value.password;
+            usersTmp[0]['name'] = value.name;
+            usersTmp[0]['email'] = value.email;
+            usersTmp[0]['image'] = value.image;
+            return true;
+        }else{
+            return false;
+        }
+    });
+
+    res.send(usersTmp)
+})
+
+
+
+
+
+
+
 // Listar users
 app.get('/users', (req, res) => {
     let pos = 0;
