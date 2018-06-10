@@ -99,7 +99,7 @@ app.post('/validateUser', (req, res) => {
         if( (value.userName == data.userName) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
-			usersTmp[0]['userName'] = value.UserName;
+			usersTmp[0]['userName'] = value.userName;
             usersTmp[0]['name'] = value.name;
             usersTmp[0]['lastName'] = value.lastname;
             usersTmp[0]['email'] = value.value.email;
