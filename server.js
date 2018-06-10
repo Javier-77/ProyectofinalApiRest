@@ -99,6 +99,7 @@ app.post('/validateUser', (req, res) => {
         if( (value.name == data.Name) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
+			usersTmp[0]['userName'] = value.UserName;
             usersTmp[0]['name'] = value.name;
             usersTmp[0]['lastName'] = value.lastname;
             usersTmp[0]['email'] = value.value.email;
@@ -136,6 +137,7 @@ app.post('/users', (req, res) => {
 app.put('/users/:id',(req, res) => {
     let params = req.params;
     let data = req.body;
+    users[params.id]['userName'] = data.UserName;
     users[params.id]['name'] = data.Name;
 	users[params.id]['lastName'] = data.LastName;
 	users[params.id]['email'] = data.Email;
