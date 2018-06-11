@@ -235,8 +235,7 @@ app.post('/escuderias', (req, res) => {
     let itemUser = {id: consecutive,
 				name: data.Name, 
 				points: data.Points, 
-				country: data.Country, 
-				
+				country: data.Country;
 escuderias.push(itemUser)
     res.send("New escuderias add")
 })
