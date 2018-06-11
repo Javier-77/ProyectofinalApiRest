@@ -93,7 +93,7 @@ app.delete('/pilotos/:id',(req, res) => {
 
 app.post('/validateUser', (req, res) => {
     let data = req.body;
-    let usersTmp = [{success: false, id: 0, username: 'Admin', name: 'Juan',lastName: 'Perez', email: '12345f', password: '1234'}];
+    let usersTmp = [{success: false, id: '', username: '', name: '',lastName: '', email: '', password: ''}];
 
     users.some(function (value, index, _arr) {
         if( (value.username == data.UserName) && (value.password == data.Password) ){
