@@ -235,7 +235,8 @@ app.post('/escuderias', (req, res) => {
     let itemUser = {id: consecutive,
 				name: data.Name, 
 				points: data.Points, 
-				country: data.Country;
+				country: data.Country,
+				image: 'https://static8.depositphotos.com/1052036/830/v/950/depositphotos_8302285-stock-illustration-racing-flag-with-shield.jpg';
 escuderias.push(itemUser)
     res.send("New escuderias add")
 })
