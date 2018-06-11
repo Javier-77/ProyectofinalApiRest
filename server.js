@@ -96,7 +96,7 @@ app.post('/validateUser', (req, res) => {
     let usersTmp = [{success: false, id: 0, username: 'Admin', name: 'Juan',lastName: 'Perez', email: '12345f', password: '1234'}];
 
     users.some(function (value, index, _arr) {
-        if( (value.username == data.userName) && (value.password == data.Password) ){
+        if( (value.username == data.UserName) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
 			usersTmp[0]['username'] = value.username;
