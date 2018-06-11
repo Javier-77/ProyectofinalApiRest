@@ -181,7 +181,7 @@ app.post('/pistas', (req, res) => {
 			circuitLength: data.CircuitLength,
 			raceDistance: data.RaceDistance, 
 			countryPrix: data.CountryPrix};
-    pilotos.push(itemPista)
+    pistas.push(itemPista)
     res.send("New pistas add")
 })
 
