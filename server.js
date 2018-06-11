@@ -7,7 +7,7 @@ const hostname = '127.0.0.1';
 const PORT = process.env.PORT || 5000
 
 var pilotos = [
-    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilston', team: 'Mercedez', country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra'},
+    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilston', team: 'Mercedes', country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra'},
     {id: 1, numero: '5', name: 'Sebastian', lastName: 'Vettel', team: 'Ferrari', country: 'Alemania', dateBirth: '03/07/1987', placeBirth: 'Heppenheim, Alemania'},
 	{id: 2, numero: '3', name: 'Daniel', lastName: 'Ricciardo', team: 'RedBull Racing', country: 'Australia', dateBirth: '01/07/1989', placeBirth: 'Perth, Australia'},
 	{id: 3, numero: '77', name: 'Valtteri', lastName: 'Bottas', team: 'Mercedez', country: 'Finlandia', dateBirth: '28/08/19879', placeBirth: 'Nastola, Finlandia'},
@@ -20,6 +20,16 @@ var pilotos = [
 var users = [
     {id: 0, username: 'Admin', name: 'Admin', lastname: 'Admin', email: '1234', password: '1234'},
 	{id: 1, username: 'Admin',name: 'Admin2', lastname: 'Admin', email: '1234', password: '1234'}
+];
+
+var escuderias = [
+    {id: 0, name: 'Mercedes', points: '206', country: 'Alemania',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Mercedes/_jcr_content/logo.img.jpg/1486740144183.jpg'},
+	{id: 1, name: 'Ferrari', points: '198', country: 'Italia',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Ferrari/_jcr_content/logo.img.jpg/1521797345005.jpg'},
+	{id: 2, name: 'RedBull Racing Tag Heuer', points: '134', country: 'Austria',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Red-Bull/_jcr_content/logo.img.jpg/1514762875081.jpg'},
+	{id: 3, name: 'Renault', points: '56', country: 'Francia',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Renault/_jcr_content/logo.img.jpg/1509095937427.jpg'},
+	{id: 4, name: 'Mclare', points: '40', country: 'Reino unido',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/McLaren/_jcr_content/logo.img.jpg/1515152671364.jpg'},
+	{id: 5, name: 'Force Indian', points: '28', country: 'Indi',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Force-India/_jcr_content/logo.img.jpg/1496922112802.jpg'},
+	{id: 6, name: 'Toro-Rosso', points: '19', country: 'Italia',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Toro-Rosso/_jcr_content/logo.img.jpg/1521797337296.jpg'},
 ];
 
 var pistas = [
@@ -206,6 +216,53 @@ app.delete('/pistas/:id',(req, res) => {
 })
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+// Listar escuderias
+app.get('/escuderias', (req, res) => {
+    let pos = 0;
+    escuderias.forEach(function(entry) {
+        entry.id = pos;
+        pos++;
+    });
+    res.send(escuderias)
+})
+
+// Crear escuderias
+app.post('/escuderias', (req, res) => {
+    let data = req.body;
+    let consecutive = escuderias.length;
+    let itemUser = {id: consecutive,
+				name: data.Name, 
+				points: data.Points, 
+				country: data.Country, 
+				
+escuderias.push(itemUser)
+    res.send("New escuderias add")
+})
+
+// Actualizar escuderias
+app.put('/escuderias/:id',(req, res) => {
+    let params = req.params;
+    let data = req.body;
+    escuderias[params.id]['name'] = data.Name;
+    escuderias[params.id]['points'] = data.Points;
+    escuderias[params.id]['country'] = data.Country;	
+    escuderias[params.id]['image'] = data.Image;	
+    res.send("escuderias update")
+})
+
+// Eliminar escuderias
+app.delete('/escuderias/:id',(req, res) => {
+    let params = req.params;
+    escuderias.splice(params.id, 1);
+    res.send('escuderias delete')
+})
+ 
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 http.createServer(app).listen(PORT, () => {
   console.log(`Server running at http://${hostname}:${PORT}/`);
 })
