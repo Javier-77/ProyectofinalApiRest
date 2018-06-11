@@ -95,7 +95,7 @@ app.post('/validateUser', (req, res) => {
     let data = req.body;
     let usersTmp = [{success: false, id: 0, username: '', name: '',lastName: '', email: '', password: ''}];
 
-    users.some(function (value, index) {
+    users.some(function (value, index, _arr) {
         if( (value.username == data.UserName) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
@@ -130,7 +130,7 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     let data = req.body;
     let consecutive = users.length;
-    let itemUser = {id: consecutive, username: data.UsernName, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
+    let itemUser = {id: consecutive, username: data.UserName, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
     users.push(itemUser)
     res.send("New users add")
 })
