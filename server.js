@@ -18,8 +18,8 @@ var pilotos = [
 ];
 
 var users = [
-    {id: 0, userName: 'Admin', name: 'Admin', lastName: 'Admin', email: '1234', password: '1234'},
-	{id: 1, userName: 'Admin',name: 'Admin2', lastName: 'Admin', email: '1234', password: '1234'}
+    {id: 0, username: 'Admin', name: 'Admin', lastname: 'Admin', email: '1234', password: '1234'},
+	{id: 1, username: 'Admin',name: 'Admin2', lastname: 'Admin', email: '1234', password: '1234'}
 ];
 
 var pistas = [
@@ -99,10 +99,10 @@ app.post('/validateUser', (req, res) => {
         if( (value.username == data.userName) && (value.password == data.Password) ){
             usersTmp[0]['success'] = true;
             usersTmp[0]['id'] = value.id;
-			usersTmp[0]['username'] = value.userName;
+			usersTmp[0]['username'] = value.username;
             usersTmp[0]['name'] = value.name;
             usersTmp[0]['lastName'] = value.lastname;
-            usersTmp[0]['email'] = value.value.email;
+            usersTmp[0]['email'] = value.email;
             usersTmp[0]['password'] = value.password;
             return true;
         }else{
@@ -130,7 +130,7 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     let data = req.body;
     let consecutive = users.length;
-    let itemUser = {id: consecutive, userName: data.UserName, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
+    let itemUser = {id: consecutive, username: data.UsernName, name: data.Name, lastName: data.LastName, email: data.Email, password: data.Password};
     users.push(itemUser)
     res.send("New users add")
 })
