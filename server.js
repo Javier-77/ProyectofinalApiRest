@@ -174,9 +174,14 @@ app.get('/pistas', (req, res) => {
 app.post('/pistas', (req, res) => {
     let data = req.body;
     let consecutive = pistas.length;
-    let itemUser = {id: consecutive, name: data.Name, firstGrandPrix: data.FirstGrandPrix, numberLaps: data.NumberLaps, circuitLength: data.CircuitLength,
-						raceDistance: data.RaceDistance, countryPrix: data.CountryPrix};
-    pilotos.push(itemUser)
+    let itemPista = {id: consecutive, 
+			name: data.Name, 
+			firstGrandPrix: data.FirstGrandPrix, 
+			numberLaps: data.NumberLaps, 
+			circuitLength: data.CircuitLength,
+			raceDistance: data.RaceDistance, 
+			countryPrix: data.CountryPrix};
+    pilotos.push(itemPista)
     res.send("New pistas add")
 })
 
