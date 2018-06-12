@@ -7,14 +7,14 @@ const hostname = '127.0.0.1';
 const PORT = process.env.PORT || 5000
 
 var pilotos = [
-    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilston', team: 'Mercedes', country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra'},
-    {id: 1, numero: '5', name: 'Sebastian', lastName: 'Vettel', team: 'Ferrari', country: 'Alemania', dateBirth: '03/07/1987', placeBirth: 'Heppenheim, Alemania'},
-	{id: 2, numero: '3', name: 'Daniel', lastName: 'Ricciardo', team: 'RedBull Racing', country: 'Australia', dateBirth: '01/07/1989', placeBirth: 'Perth, Australia'},
-	{id: 3, numero: '77', name: 'Valtteri', lastName: 'Bottas', team: 'Mercedez', country: 'Finlandia', dateBirth: '28/08/19879', placeBirth: 'Nastola, Finlandia'},
-	{id: 4, numero: '7', name: 'Kimi', lastName: 'Raikkonen', team: 'Ferrari', country: 'Finlandia', dateBirth: '17/10/1979', placeBirth: 'Espoo, Finlandia'},
-	{id: 5, numero: '33', name: 'Max', lastName: 'Verstappen', team: 'RedBull Racing', country: 'Países Bajos', dateBirth: '30/09/1997', placeBirth: 'Hasselt, Belgica'},
-	{id: 6, numero: '14', name: 'Fernando', lastName: 'Alonso', team: 'Mclaren', country: 'España', dateBirth: '29/07/1981', placeBirth: 'Oviedo, España'},
-	{id: 7, numero: '27', name: 'Nico', lastName: 'Hulkenberg', team: 'Renault', country: 'Alemania', dateBirth: '19/08/1987', placeBirth: 'Emmerich am Rhein, Alemania'},    
+    {id: 0, numero: '44', name: 'Lewis', lastName: 'Hamilton', team: 'Mercedes', country: 'Reino Unido', dateBirth: '07/01/1985', placeBirth: 'Stevenage, Inglaterra', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/lewis-hamilton/_jcr_content/image.img.1024.medium.jpg/1521204312905.jpg'},
+    {id: 1, numero: '5', name: 'Sebastian', lastName: 'Vettel', team: 'Ferrari', country: 'Alemania', dateBirth: '03/07/1987', placeBirth: 'Heppenheim, Alemania', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/sebastian-vettel/_jcr_content/image.img.1024.medium.jpg/1522068627396.jpg'},
+	{id: 2, numero: '3', name: 'Daniel', lastName: 'Ricciardo', team: 'RedBull Racing', country: 'Australia', dateBirth: '01/07/1989', placeBirth: 'Perth, Australia', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/daniel-ricciardo/_jcr_content/image.img.1024.medium.jpg/1521203915633.jpg'},
+	{id: 3, numero: '77', name: 'Valtteri', lastName: 'Bottas', team: 'Mercedez', country: 'Finlandia', dateBirth: '28/08/19879', placeBirth: 'Nastola, Finlandia', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/valtteri-bottas/_jcr_content/image.img.1024.medium.jpg/1521204355212.jpg'},
+	{id: 4, numero: '7', name: 'Kimi', lastName: 'Raikkonen', team: 'Ferrari', country: 'Finlandia', dateBirth: '17/10/1979', placeBirth: 'Espoo, Finlandia', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/kimi-raikkonen/_jcr_content/image.img.1024.medium.jpg/1521204007378.jpg'},
+	{id: 5, numero: '33', name: 'Max', lastName: 'Verstappen', team: 'RedBull Racing', country: 'Países Bajos', dateBirth: '30/09/1997', placeBirth: 'Hasselt, Belgica', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/max-verstappen/_jcr_content/image.img.1024.medium.jpg/1521204147986.jpg'},
+	{id: 6, numero: '14', name: 'Fernando', lastName: 'Alonso', team: 'Mclaren', country: 'España', dateBirth: '29/07/1981', placeBirth: 'Oviedo, España', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/fernando-alonso/_jcr_content/image.img.1024.medium.jpg/1521203948853.jpg'},
+	{id: 7, numero: '27', name: 'Nico', lastName: 'Hulkenberg', team: 'Renault', country: 'Alemania', dateBirth: '19/08/1987', placeBirth: 'Emmerich am Rhein, Alemania', image: 'https://www.formula1.com/content/fom-website/en/championship/drivers/nico-hulkenberg/_jcr_content/image.img.1024.medium.jpg/1521204189320.jpg'},    
 ];
 
 var users = [
@@ -73,7 +73,8 @@ app.post('/pilotos', (req, res) => {
 				team: data.Team, 
 				country: data.Country, 
 				dateBirth: data.DateBirth, 
-				placeBirth: data.PlaceBirth};
+				placeBirth: data.PlaceBirth,
+				image: 'https://static2.fjcdn.com/comments/That+aint+jesus+its+the+stig+moonlighting+as+a+smash+_c4eeeee2f21c3003359982de53689b54.jpg'};
     pilotos.push(itemUser)
     res.send("New piloto add")
 })
