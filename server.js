@@ -28,7 +28,7 @@ var escuderias = [
 	{id: 2, name: 'RedBull Racing Tag Heuer', points: '134', country: 'Austria',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Red-Bull/_jcr_content/logo.img.jpg/1514762875081.jpg'},
 	{id: 3, name: 'Renault', points: '56', country: 'Francia',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Renault/_jcr_content/logo.img.jpg/1509095937427.jpg'},
 	{id: 4, name: 'Mclare', points: '40', country: 'Reino unido',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/McLaren/_jcr_content/logo.img.jpg/1515152671364.jpg'},
-	{id: 5, name: 'Force Indian', points: '28', country: 'Indi',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Force-India/_jcr_content/logo.img.jpg/1496922112802.jpg'},
+	{id: 5, name: 'Force Indian', points: '28', country: 'India',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Force-India/_jcr_content/logo.img.jpg/1496922112802.jpg'},
 	{id: 6, name: 'Toro-Rosso', points: '19', country: 'Italia',image: 'https://www.formula1.com/content/fom-website/en/championship/teams/Toro-Rosso/_jcr_content/logo.img.jpg/1521797337296.jpg'},
 ];
 
